@@ -29,6 +29,7 @@ export const config = {
         './test/specs/functional/**/*.js',
         
         
+        
     ],
     // Patterns to exclude.
     exclude: [
@@ -61,7 +62,7 @@ export const config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 2,
         //
         browserName: 'chrome',
         'goog:chromeOptions': {
@@ -76,7 +77,7 @@ export const config = {
     },
     {
     
-        maxInstances: 5,
+        maxInstances: 2,
         //
         browserName: 'msedge',
         //'ms:edgeOptions': {
@@ -321,7 +322,7 @@ export const config = {
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
         return new Promise((resolve, reject) => {
-            const generationTimeout = setTimeout(
+            const generationTimeout = setTimeout( 
                 () => reject(reportError),
                 5000)
 
