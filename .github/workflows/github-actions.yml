@@ -5,7 +5,7 @@ on:
 
 jobs:
   functional-tests:
-    timeout-minutes: 10
+    timeout-minutes: 20
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
         run: npm run teardown
 
   imagecomparison-visual-tests:
-    timeout-minutes: 10
+    timeout-minutes: 20
     runs-on: ubuntu-latest
 
     steps:
