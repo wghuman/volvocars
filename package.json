@@ -21,7 +21,7 @@
     "volvoimagecheck": "wdio run ./wdio.conf.imagecomparison.js",
     "volvodocker": "wdio run ./wdio.conf.docker.js",
     "volvotestreport": "allure open",
-    "setup": "docker-compose up",
+    "setup": "docker-compose up -d",
     "teardown": "docker-compose down"
   }
 }
