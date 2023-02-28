@@ -9,7 +9,7 @@ import { config } from "./wdio.conf.js";
            browserName: 'chrome',
            maxInstances: 2,
           'goog:chromeOptions': {
-            args: ['--incognito', 'headless', 'disable-gpu'],
+            args: ['--incognito', '--headless', 'disable-gpu'],
           },
           acceptInsecureCerts: true,
         },

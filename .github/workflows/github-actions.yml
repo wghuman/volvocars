@@ -26,9 +26,6 @@ jobs:
       - name: Run e2e functional tests
         run: npm run volvoheadless
 
-      - name: Generate reports
-        run: allure generate allure-results 
-
       - name: Teardown the environment
         run: npm run teardown
 
