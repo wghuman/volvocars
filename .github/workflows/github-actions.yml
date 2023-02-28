@@ -28,3 +28,32 @@ jobs:
 
       - name: Teardown the environment
         run: npm run teardown
+
+  imagecomparison-visual-tests:
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3 
+
+      - name: setup node 
+        uses: actions/setup-node@v3
+        with:   
+          node-version: 18.14
+
+      - name: fire the environment
+        run: npm run setup
+
+      - name: install dependencies
+        run: npm i
+
+      - name: Run e2e imagecomparison tests
+        run: npm run volvoimagecheck
+
+      - name: Teardown the environment
+        run: npm run teardown
+
+
+      
+
