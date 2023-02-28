@@ -1,0 +1,58 @@
+name: github-actions
+
+on: [push]
+jobs:
+  functional-tests
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: checkout repo
+      uses: actions/checkout@v3 
+
+    - name: setup node 
+      uses: actions/setup-node@v3
+      with:   
+        node-version: 18.14
+
+      - name: fire the environment
+        run: npm run setup
+
+      - name: install dependencies
+        run: npm i
+
+      - name: Run e2e functional tests
+        run: npm run volvoheadless
+
+      - name: Generate reports
+        run: allure generate allure-results 
+
+      - name: Teardown the environment
+        run: npm run teardown
+
+  imagecomparison-visual-tests
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: checkout repo
+      uses: actions/checkout@v3 
+
+    - name: setup node 
+      uses: actions/setup-node@v3
+      with:   
+        node-version: 18.14
+
+      - name: fire the environment
+        run: npm run setup
+
+      - name: install dependencies
+        run: npm i
+
+      - name: Run e2e functional tests
+        run: npm run volvoimagecheck
+
+      - name: Teardown the environment
+        run: npm run teardown
+
+
+      
+

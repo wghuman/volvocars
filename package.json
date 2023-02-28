@@ -1,0 +1,27 @@
+{
+  "name": "A-million-miles-more",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.3.5",
+    "@wdio/cli": "^8.3.9",
+    "@wdio/local-runner": "^8.3.9",
+    "@wdio/mocha-framework": "^8.3.0",
+    "@wdio/spec-reporter": "^8.3.0",
+    "allure-commandline": "^2.21.0",
+    "chromedriver": "^110.0.0",
+    "geckodriver": "^3.2.0",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-docker-service": "^3.2.1",
+    "wdio-geckodriver-service": "^4.1.0",
+    "wdio-image-comparison-service": "^5.0.2"
+  },
+  "scripts": {
+    "volvo": "wdio run ./wdio.conf.js",
+    "volvoheadless": "wdio run ./wdio.conf.headless.js",
+    "volvoimagecheck": "wdio run ./wdio.conf.imagecomparison.js",
+    "volvodocker": "wdio run ./wdio.conf.docker.js",
+    "volvotestreport": "allure open",
+    "setup": "docker-compose up",
+    "teardown": "docker-compose down"
+  }
+}
