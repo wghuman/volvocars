@@ -11,7 +11,13 @@ class LandingPage extends Page {
             return $('#onetrust-accept-btn-handler');
         }
         
+        get pauseButton () {
+            return $('[aria-label="pause"]');
+        }
         
+        get playButton () {
+            return $('[aria-label="play"]');
+        }
         
         //#endregion Locators
     
