@@ -45,13 +45,7 @@ config.capabilities = [
     maxInstances: 2,
     acceptInsecureCerts: true,
   },
-  {
-    browserName: 'msedge',
-    maxInstances: 2,
-    acceptInsecureCerts: true,
-  },
-  
-  
+   
 ];
 
 export { config };
