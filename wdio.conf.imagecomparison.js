@@ -1,6 +1,5 @@
 import { config } from "./wdio.conf.js";
 import { join } from 'path'
-//const { join } = require('path');
 
 config.hostname = 'localhost';
 config.port = 4444;
