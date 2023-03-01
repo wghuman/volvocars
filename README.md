@@ -31,6 +31,11 @@ To run the tests in dockerized environment, run the following command
 ```
 npm run volvodocker
 ```
+To run image comparison tests, use the follwoing command
+
+```
+npm run volvoimagecheck
+```
 
 ### Teardown
 once the tests are completed, run the following command in your terminal to take the docker environment down. This will detatch all the containers fired up previousely
@@ -75,3 +80,6 @@ This will open the test results file in your default browser.
 ## Github Actions
 A basic and simple workflow to run the tests (both functional tests and image comparison tests) on every push. The results can be found under actions tab.
 
+## Improvements
+
+This framework can be further improved to use environment variables to set several services, target browsers, parallelism as well as difference capabilities of Nodes. 

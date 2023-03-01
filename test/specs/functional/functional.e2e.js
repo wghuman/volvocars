@@ -1,4 +1,3 @@
-
 import LandingPage from '../../../test/pageobjects/landing.page.js'
 import { acceptCookies } from '../../../utils/utilityFunctions.js'
 

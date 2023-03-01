@@ -4,7 +4,6 @@ import { acceptCookies } from '../../../utils/utilityFunctions.js'
 describe('Image comparison basic tests', () => {
     beforeEach(async () => {
         await LandingPage.open();
-        //await browser.maximizeWindow();
         await acceptCookies();
       });
 
@@ -17,18 +16,12 @@ describe('Image comparison basic tests', () => {
         await browser.saveFullPageScreen('fullPage', {hideElements: [await $('#Video-1')],
         });
       });
-      
-      
+            
       it('Compare the full screen images ', async () => {
-        await browser.checkFullPageScreen('fullPage', {
-          
+        await browser.checkFullPageScreen('fullPage', {          
           hideElements: [await $('#Video-1')],
         });
       });
-
-      
-
-   
 })
 
 
